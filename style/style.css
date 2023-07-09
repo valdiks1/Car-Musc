@@ -1,0 +1,617 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #141414;
+}
+
+header{
+    width: 100%;
+    height: 1000px;
+    background-image: url('../img/header.png');
+    padding-top: 41px;
+}
+
+header nav{
+    width: 1296px;
+    margin: auto;
+    display: flex;
+}
+header nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li{
+    margin-right: 40px;
+}
+
+header nav ul li a{
+    font-size: 24px;
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.72px;
+    color: #fff;
+    text-decoration: none;
+    transition: .2s ease-out;
+}
+
+header nav ul li a:hover{
+    text-decoration: underline;
+    color: #DB3138;
+}
+
+header .content {
+    width: 483px;
+    margin: auto;
+    margin-top: 168px;
+}
+
+header .content h1{
+    text-align: center;
+    font-size: 150px;
+    font-family: 'ReformaGroteskBoldC';
+    font-weight: 700;
+    line-height: 125%;
+    color: #DB3138;
+}
+
+header .content h1::after{
+    display: block;
+    content: '';
+    background-color: #DB3138;
+    width: 146px;
+    height: 14px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+header .content p{
+    width: 437px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    line-height: 120%;
+    color:#fff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+header .content a{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.2px;
+    background-color: #DB3138;
+    padding: 15px 25px;
+    text-decoration: none;
+    position: relative;
+    width: 170px;
+    display: block;
+    margin: auto;
+    transition: .2s;
+}
+
+header .content a:hover{
+    background-color: #fff;
+    color: #DB3138;
+}
+
+header .footer-header {
+    height: 213px;
+    width: 100%;
+    border-top: #fff solid 1px;
+    border-bottom: #fff solid 1px;
+    margin-top: 103px;
+    display: flex;
+}
+
+header .footer-header .item{
+    width: 640px;
+    border-right: #fff 1px solid;
+}
+
+header .footer-header .item:last-child{
+    border: none;
+}
+
+header .footer-header .item h3{
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0.9px;
+    color: #fff;
+}
+
+header .footer-header .item p{
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #DB3138;
+    text-align: center;
+}
+
+header .footer-header .item p:last-child{
+    margin-top: 15px;
+}
+
+
+
+/***our achievements****/
+
+section.our-achievements{
+    width: 100%;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    background-color: #141414;
+}
+
+section.our-achievements .content{
+    width: 1296px;
+    height: 745px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.our-achievements .content .left{
+    width: 636px;
+}
+
+section.our-achievements .content > .left h2{
+    color: #fff;
+    font-size: 52px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+}
+
+section.our-achievements .content > .left h2:after{
+    display: block;
+    content: '';
+    background-color: #DB3138;
+    width: 146px;
+    height: 14px;
+    margin-top: 40px;
+}
+
+section.our-achievements .content > .left p{
+    margin-top: 60px;
+    font-size: 24px;
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.72px;
+    color: #fff;
+}
+
+section.our-achievements .content .blocks{
+    width: 636px;
+    /*background-color: #fff;*/
+    display: flex;
+}
+
+section.our-achievements .content .blocks .left, section.our-achievements .content .blocks .right{
+    display: flex;
+    flex-direction: column;
+    width: 318px;
+}
+
+section.our-achievements .content .blocks .right{
+    margin-top: 40px;
+}
+
+section.our-achievements .content .blocks .left .item, section.our-achievements .content .blocks .right .item{
+    width: 318px;
+    height: 177px;
+    border: #898989 solid 1px;
+
+}
+
+section.our-achievements h2.title-blocks{
+    color: #DB3138;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-top: 21px;
+}
+
+section.our-achievements .text-blocks{
+    font-size: 16px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin-top: 22px;
+}
+
+section.our-achievements img.img{
+    /* width: 37.3px;
+    height: 45.4px; */
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+/***slider***/
+
+section.slider{
+    background-color: #141414;
+    padding-bottom: 180px;
+}
+
+section.slider .container{
+    width: 1558px;
+    height: 420px;
+    margin: auto;
+    position: relative;
+}
+
+section.slider .container .slider{
+    width: 1296px;
+    height: 420px;
+    margin: auto;
+    overflow: hidden;
+}
+
+section.slider .container .slider .inner-slider{
+    /* width: 3888px; */
+    width: 2640px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+section.slider .container .slider .inner-slider .item{
+    width: 416px;
+    height: 350px;
+    margin-right: 24px;
+    position: relative;
+}
+
+section.slider .container .slider .inner-slider .item  .items-text{
+    width: 366px;
+    height: 70px;
+    background-color: #DB3138;
+    z-index: 20;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.slider .container .slider .inner-slider .item  .items-text p{
+    font-size: 18px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    width: 286px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+section.slider .container button{
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: #DB3138 3px solid;
+    transform: rotate(45deg);
+    position: absolute;
+    cursor: pointer;
+}
+
+
+
+
+section.slider .container button.prev{
+    top: 35%;
+    left: 0;
+}
+
+section.slider .container button.next{
+    top: 35%;
+    right: 0;
+}
+
+section.slider .container button p{
+    transform: rotate(-45deg);
+    color: #fff;
+    font-size: 25px;
+}
+
+/**advantages***/
+
+section.advantages{
+    width: 100%;
+    background-color: #141414;
+    padding-bottom: 179px;
+}
+
+section.advantages .container{
+    width: 1296px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.advantages .container .left{
+    width: 526px;
+}
+
+section.advantages .container .left .item{
+    width: 100%;
+}
+
+section.advantages .container .left .item::after{
+    display: block;
+    content: '';
+    background-color: #DB3138;
+    width: 146px;
+    height: 14px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 53px;
+}
+
+section.advantages .container .left .item:last-child::after{
+    display: none;
+}
+
+section.advantages .container .left .item .title{
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+section.advantages .container .left .item .title h3{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    color: #fff;
+    margin-left: 36.53px;
+    margin-top: 14px;
+}
+
+section.advantages .container .left .item p{
+    font-size: 24px;
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.72px;
+    color: #fff;
+}
+
+section.advantages .container .right{
+    width: 636px;
+}
+
+section.advantages .container .right .slider{
+    width: 636px;
+    height: 550px;
+    overflow: hidden;
+}
+
+section.advantages .container .right .slider .inner-slider{
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+section.advantages .container .right .bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+section.advantages .container .right .bottom > p{
+    width: 422px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+section.advantages .container .right .bottom button{
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: #DB3138 3px solid;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+section.advantages .container .right .bottom button p{
+    color: #fff;
+    transform: rotate(-45deg);
+    font-size: 25px;
+}
+
+/*****our-services*****/
+
+section.our-services{
+    width: 100%;
+    padding-bottom: 180px;
+}
+
+section.our-services .container {
+    width: 1296px;
+    margin: auto;
+}
+
+section.our-services .container h2{
+    font-family: 'ReformaGroteskDemiC';
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+section.our-services .container h2:after{
+    display: block;
+    content: '';
+    background-color: #DB3138;
+    width: 146px;
+    height: 14px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.buttons-services {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin: auto;
+    margin-top: 60px;
+    list-style-type: none;
+}
+
+.button-service {
+    width: 181px;
+    height: 75px;
+    padding: 20px 40px;
+    border: none;
+    font-family: 'ReformaGroteskDemiC';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    transition: .2s;
+}
+
+.button-service.active{
+    background-color: #DB3138;
+}
+
+.button-service:hover{
+    background-color: #db3137c5;
+}
+
+.services {
+    width: 1296px;
+    overflow: hidden;
+    margin-top: 90px;
+
+}
+
+.services .items{
+    width: 2592px;
+    position: relative;
+    display: flex;
+    left: 0;
+    transition: 2s;
+}
+
+.pasting {
+    width: 1296px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services .item{
+    width: 306px;
+    height: 428px;
+    border: 1px solid #898989;
+}
+
+.services .item .img{
+    display: block;
+    margin: auto;
+    margin-top: 86px;
+    height: 56px;
+    width: 70px;
+}
+
+.services .item h3{
+    font-family: 'ReformaGroteskDemiC';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin-top: 27px;
+}
+
+.services .item p{
+    font-family: 'ReformaGroteskDemiC';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    width: 226px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.services .item a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #DB3138;
+    display: block;
+    margin: auto;
+    font-family: 'ReformaGroteskDemiC';
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    width: 113px;
+    height: 41px;
+    margin-top: 25px;
+    transition: .2s;
+}
+
+.services .item a:hover{
+    background-color: #fff;
+    color: #DB3138;
+}
