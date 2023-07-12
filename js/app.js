@@ -65,3 +65,33 @@ detailing.addEventListener('click', () => {
     pasting.classList.remove('active');
     serviceBlock.style.left = -1296 + 'px';
 })
+
+/*advantages2*/
+let advantages2Prev = document.querySelector('.advantages2-prev');
+let advantages2Next = document.querySelector('.advantages2-next');
+let advantages2Quantity = document.querySelector('#advantages2-slider').children.length - 1;
+let advantages2Clicks = 0;
+let advantages2Offset = 0;
+advantages2Prev.setAttribute("disabled", "disabled");
+
+advantages2Next.addEventListener('click', ()=>{
+    advantages2Offset+=636;
+    document.querySelector('#advantages2-slider').style.left = -advantages2Offset + 'px';
+    advantages2Clicks++;
+    advantages2Prev.removeAttribute('disabled');
+    if(advantages2Clicks == advantages2Quantity){
+        advantages2Next.setAttribute("disabled", "disabled");
+    } else {
+        advantages2Next.removeAttribute('disabled');
+    }
+})
+
+advantages2Prev.addEventListener('click', ()=>{
+    advantages2Offset-=636;
+    document.querySelector('#advantages2-slider').style.left = -advantages2Offset + 'px';
+    advantages2Clicks--;
+    advantages2Next.removeAttribute('disabled');
+    if(advantages2Clicks == 0) {
+        advantages2Prev.setAttribute("disabled", "disabled");
+    }
+})

@@ -615,3 +615,115 @@ section.our-services .container h2:after{
     background-color: #fff;
     color: #DB3138;
 }
+
+section.advantages2 {
+    width: 100%;
+    padding-bottom: 180px;
+}
+
+section.advantages2 .container{
+    width: 1296px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.advantages2 .left{
+    width: 636px;
+}
+
+section.advantages2 .left .advantages2-slider{
+    width: 636px;
+    /* height: 550px; */
+    overflow: hidden;
+    
+}
+
+.advantages2-inner-slider{
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+section.advantages2 .container .left .bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+section.advantages2 .container .left .bottom > p{
+    width: 422px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+section.advantages2 .container .left .bottom button{
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: #DB3138 3px solid;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+section.advantages2 .container .left .bottom button p{
+    color: #fff;
+    transform: rotate(-45deg);
+    font-size: 25px;
+}
+
+section.advantages2 .container .right{
+    width: 526px;
+
+}
+
+section.advantages2 .container .right .item{
+    width: 100%;
+}
+
+section.advantages2 .container .right .item::after{
+    display: block;
+    content: '';
+    background-color: #DB3138;
+    width: 146px;
+    height: 14px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 53px;
+}
+
+section.advantages2 .container .right .item:last-child::after{
+    display: none;
+}
+
+section.advantages2 .container .right .item .title{
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+section.advantages2 .container .right .item .title h3{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    color: #fff;
+    margin-left: 36.53px;
+    margin-top: 14px;
+}
+
+section.advantages2 .container .right .item p{
+    font-size: 24px;
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.72px;
+    color: #fff;
+}
