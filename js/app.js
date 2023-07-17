@@ -95,3 +95,37 @@ advantages2Prev.addEventListener('click', ()=>{
         advantages2Prev.setAttribute("disabled", "disabled");
     }
 })
+
+/***scroll */
+
+let smoothLinks = document.querySelectorAll('.smooth-link');
+
+smoothLinks.forEach((link) =>{
+    link.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let nameSection = link.dataset.scroll;
+        let heightSection = document.querySelector('#'+nameSection).offsetTop;
+        window.scroll({
+            left: 0,
+            top: heightSection,
+            behavior: 'smooth'
+        })
+    })
+})
+
+/***fixed header***/
+
+let headerH = document.querySelector('header').offsetHeight;
+
+fixedNav();
+
+window.addEventListener('scroll', fixedNav);
+
+function fixedNav(){
+    let scrollOffset = window.pageYOffset;
+    if(scrollOffset > headerH){
+        document.querySelector('nav').classList.add('fixed');
+    }else{
+        document.querySelector('nav').classList.remove('fixed');
+    }
+}
