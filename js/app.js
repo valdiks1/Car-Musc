@@ -1,4 +1,5 @@
-let prev = document.querySelector('.prev');
+
+/*let prev = document.querySelector('.prev');
 let next = document.querySelector('.next');
 let offset = 0;
 let sliderInner = document.querySelector('.inner-slider');
@@ -47,8 +48,10 @@ prev2.addEventListener('click', ()=>{
         prev2.setAttribute("disabled", "disabled");
     }
 })
+*/
 
 /*services*/
+/*
 let pasting = document.querySelector('#pasting');
 let detailing = document.querySelector('#detailing');
 let serviceBlock = document.querySelector('#serviceBlock');
@@ -64,9 +67,11 @@ detailing.addEventListener('click', () => {
     detailing.classList.add('active');
     pasting.classList.remove('active');
     serviceBlock.style.left = -1296 + 'px';
-})
+})*/
 
 /*advantages2*/
+
+/*
 let advantages2Prev = document.querySelector('.advantages2-prev');
 let advantages2Next = document.querySelector('.advantages2-next');
 let advantages2Quantity = document.querySelector('#advantages2-slider').children.length - 1;
@@ -94,28 +99,28 @@ advantages2Prev.addEventListener('click', ()=>{
     if(advantages2Clicks == 0) {
         advantages2Prev.setAttribute("disabled", "disabled");
     }
-})
+})*/
 
 /***scroll */
 
-let smoothLinks = document.querySelectorAll('.smooth-link');
+/*let smoothLinks = document.querySelectorAll('.smooth-link');
 
 smoothLinks.forEach((link) =>{
     link.addEventListener('click', (e)=>{
         e.preventDefault();
         let nameSection = link.dataset.scroll;
-        let heightSection = document.querySelector('#'+nameSection).offsetTop;
+        let heightSection = document.querySelector('#'+nameSection).offsetTop-50;
         window.scroll({
             left: 0,
             top: heightSection,
             behavior: 'smooth'
         })
     })
-})
+})*/
 
 /***fixed header***/
 
-let headerH = document.querySelector('header').offsetHeight;
+/*let headerH = document.querySelector('header').offsetHeight;
 
 fixedNav();
 
@@ -128,4 +133,34 @@ function fixedNav(){
     }else{
         document.querySelector('nav').classList.remove('fixed');
     }
-}
+}*/
+
+/***burger menu***/
+let burgerButton = document.querySelector('.burger-menu');
+let linksBurgerMenu = document.querySelector('#linksBurgerMenu');
+let mobLlinks = document.querySelectorAll('header nav ul li');
+let countClicks = 0;
+
+
+console.log(burgerButton.children);
+burgerButton.addEventListener('click', (e)=>{
+    e.preventDefault();
+    if(countClicks == 0){
+        linksBurgerMenu.classList.add('mobile-nav');
+        burgerButton.children[0].classList.remove('fa-bars');
+        burgerButton.children[0].classList.add('fa-xmark');
+        mobLlinks.forEach((link)=>{
+            link.style.display = 'block';
+        })
+        countClicks++;
+    } else {
+        linksBurgerMenu.classList.remove('mobile-nav');
+        burgerButton.children[0].classList.add('fa-bars');
+        burgerButton.children[0].classList.remove('fa-xmark');
+        mobLlinks.forEach((link)=>{
+            link.style.display = 'none';
+        })
+        countClicks--;
+    }
+    
+})
