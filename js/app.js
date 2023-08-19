@@ -1,10 +1,48 @@
-
-/*let prev = document.querySelector('.prev');
+/**Main slider*** */
+// Создаем медиа условие, проверяющее viewports на ширину не менее 768 пикселей.
+const mediaQuery = window.matchMedia('(max-width: 1520px)')
+let prev = document.querySelector('.prev');
 let next = document.querySelector('.next');
 let offset = 0;
 let sliderInner = document.querySelector('.inner-slider');
 
-next.addEventListener('click', ()=>{
+console.log(sliderInner.scrollWidth);
+
+next.addEventListener('click', () => {
+    let widthSlider = sliderInner.scrollWidth;
+    let countElements = sliderInner.children.length;
+    offset += widthSlider/countElements;
+    let maxOffset;
+    if (mediaQuery.matches) {
+        maxOffset = widthSlider-(widthSlider/countElements)/2;
+        console.log(maxOffset);
+    } else {
+        maxOffset = widthSlider-3*(widthSlider/countElements);
+        console.log('hey')
+    }
+    //let maxOffset = widthSlider-3*(widthSlider/countElements);
+    //console.log(widthSlider/countElements);
+    if(offset > maxOffset){
+        offset=0;
+    }
+
+    sliderInner.style.left = -offset + 'px';
+})
+
+prev.addEventListener('click', () => {
+    let widthSlider = sliderInner.scrollWidth;
+    let countElements = sliderInner.children.length;
+    offset -= widthSlider/countElements;
+    let maxOffset = widthSlider-3*(widthSlider/countElements);
+    console.log(widthSlider);
+    if(offset < 0){
+        offset=maxOffset;
+    }
+
+    sliderInner.style.left = -offset + 'px';
+})
+
+/*next.addEventListener('click', ()=>{
     offset += 440;
     if(offset > 1320) {
         offset=0;
@@ -18,9 +56,13 @@ prev.addEventListener('click', ()=>{
         offset=1320;
     }
     sliderInner.style.left = -offset + 'px';
-})
+})*/
 
-let prev2 = document.querySelector('.scd-prev');
+
+
+/**end main slider*/
+
+/*let prev2 = document.querySelector('.scd-prev');
 let next2 = document.querySelector('.scd-next');
 let quantity = document.querySelector('#slider2').children.length - 1;
 let clicks = 0;
@@ -103,7 +145,7 @@ advantages2Prev.addEventListener('click', ()=>{
 
 /***scroll */
 
-/*let smoothLinks = document.querySelectorAll('.smooth-link');
+let smoothLinks = document.querySelectorAll('.smooth-link');
 
 smoothLinks.forEach((link) =>{
     link.addEventListener('click', (e)=>{
@@ -116,11 +158,11 @@ smoothLinks.forEach((link) =>{
             behavior: 'smooth'
         })
     })
-})*/
+})
 
 /***fixed header***/
 
-/*let headerH = document.querySelector('header').offsetHeight;
+let headerH = document.querySelector('header').offsetHeight;
 
 fixedNav();
 
@@ -133,7 +175,7 @@ function fixedNav(){
     }else{
         document.querySelector('nav').classList.remove('fixed');
     }
-}*/
+}
 
 /***burger menu***/
 let burgerButton = document.querySelector('.burger-menu');
@@ -142,7 +184,7 @@ let mobLlinks = document.querySelectorAll('header nav ul li');
 let countClicks = 0;
 
 
-console.log(burgerButton.children);
+//console.log(burgerButton.children);
 burgerButton.addEventListener('click', (e)=>{
     e.preventDefault();
     if(countClicks == 0){

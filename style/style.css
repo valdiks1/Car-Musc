@@ -219,11 +219,12 @@ section.our-achievements{
 }
 
 section.our-achievements .content{
-    width: 1296px;
-    height: 745px;
+    max-width: 1296px;
+    /*height: 745px;*/
     margin: auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 section.our-achievements .content .left{
@@ -260,9 +261,10 @@ section.our-achievements .content > .left p{
 }
 
 section.our-achievements .content .blocks{
-    width: 636px;
+    max-width: 636px;
     /*background-color: #fff;*/
     display: flex;
+    flex-wrap: wrap;
 }
 
 section.our-achievements .content .blocks .left, section.our-achievements .content .blocks .right{
@@ -323,23 +325,25 @@ section.slider{
 }
 
 section.slider .container{
-    width: 1558px;
-    height: 420px;
+    max-width: 1558px;
+    max-height: 420px;
     margin: auto;
     position: relative;
 }
 
 section.slider .container .slider{
-    width: 1296px;
+    /*max-width: 1296px;*/
+    /*max-width: 1320px;*/
+    max-width: 1344px;
     height: 420px;
     margin: auto;
     overflow: hidden;
 }
 
 section.slider .container .slider .inner-slider{
-    /* width: 3888px; */
-    width: 2640px;
+    
     display: flex;
+    /*justify-content: space-between;*/
     position: relative;
     left: 0;
     transition: all ease 1s;
@@ -348,9 +352,12 @@ section.slider .container .slider .inner-slider{
 section.slider .container .slider .inner-slider .item{
     width: 416px;
     height: 350px;
-    margin-right: 24px;
+    /*margin-right: 24px;*/
     position: relative;
+    margin-left: 24px;
 }
+
+
 
 section.slider .container .slider .inner-slider .item  .items-text{
     width: 366px;
@@ -392,12 +399,14 @@ section.slider .container button{
 
 section.slider .container button.prev{
     top: 35%;
-    left: 0;
+    /*left: 0;*/
+    left: 15px;
 }
 
 section.slider .container button.next{
     top: 35%;
     right: 0;
+    right: 15px;
 }
 
 section.slider .container button p{
@@ -1072,10 +1081,30 @@ input[type="submit"]:hover{
     color: #DB3138;
 }
 
+@media screen and (max-width: 1520px){
+    section.slider .container .slider .inner-slider .item {
+        margin-left: 35%;
+    }
+}
+
 @media screen and (max-width: 1320px){
     header nav{
         width: 100%;
         padding:0 50px;
+    }
+
+    section.slider .container .slider .inner-slider .item {
+        /*margin-left: 450px;*/
+    }
+}
+
+@media screen and (max-width: 1293px) {
+    section.our-achievements .content {
+        justify-content: center;
+    }
+
+    section.our-achievements .content .left{
+        margin-bottom: 30px;
     }
 }
 
@@ -1121,6 +1150,17 @@ input[type="submit"]:hover{
         font-size: 30px;
         width: 200px;
         margin: 40px auto;
+    }
+
+    section.our-achievements .content .blocks{
+        justify-content: center;
+    }
+    section.our-achievements .content .blocks .right{
+        margin-top: 0;
+    }
+
+    section.our-achievements .content .blocks .left{
+        margin-bottom: 0;
     }
 }
 
